@@ -37,8 +37,13 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/styles/spartacus/user.scss"
+              "src/assets/fonts/fontello/css/nb-icons-font.css"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
+            },
             "scripts": []
           },
           "configurations": {

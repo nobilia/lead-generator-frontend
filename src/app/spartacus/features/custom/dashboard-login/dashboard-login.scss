@@ -1,16 +1,15 @@
 .DashboardLoginTemplate {
-
   header,
   footer {
     background-color: transparent;
     display: none;
   }
 
-  .logo {
-    width: 100px;
-    height: 100px;
+  .login-content-right img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
   }
-
 }
 
 .cx-storefront.DashboardLoginTemplate:after, cx-storefront.DashboardLoginTemplate:after,
