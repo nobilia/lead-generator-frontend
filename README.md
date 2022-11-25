@@ -6,9 +6,12 @@
 - SAP Commerce Cloud 1905 or newer
 
 ## Development server
-- Add 'lead-gen-dashboard.local' to the 'hosts' file
-- Run `ng serve` for a dev server. Navigate to `https://lead-gen-dashboard.local:4200`. The app will automatically reload if you change any of the
-source files.
+
+- Add 'lead-gen-dashboard.local' to the 'hosts' file(only first time)
+- yarn install(only first time)
+- yarn start
+- Navigate to `https://lead-gen-dashboard.local:4200/`. The app will automatically reload if you change any of the
+  source files.
 
 ## Code scaffolding
 
