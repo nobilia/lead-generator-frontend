@@ -1,0 +1,61 @@
+$nb-font-family: "Montserrat";
+
+$nb-white: #FFFFFF;
+$nb-black: #000000;
+$nb-dark-green: #2C4440;
+$nb-dark-green-1: #707D6E;
+$nb-gray-0: #D8D7D3;
+$nb-gray-1: #F7F6F3;
+$nb-gray-2: #EBEAE6;
+
+$nb-main-brand-color: #8D948D;
+$nb-main-brand-hover-color: $nb-dark-green;
+
+$nb-link-color: #8D6B47;
+$nb-error-color: #DD2753;
+
+$nb-primary-btn-hover-color: #2C4440;
+$nb-main-brand-pressed-color: #2C4440;
+$nb-outline-btn-color: $nb-white;
+$nb-outline-btn-border: $nb-gray-0;
+$nb-outline-btn-hover-border: $nb-link-color;
+$nb-outline-btn-hover-background: $nb-white;
+$nb-tertiary-btn-hover-background: $nb-gray-1;
+$nb-tertiary-btn-hover-border: $nb-gray-1;
+$nb-btn-disabled-background: #B6B6B6;
+
+$nb-radius-default: 2px;
+
+$nb-button-border-radius: 100px;
+$nb-checkbox-border-radius: $nb-radius-default;
+
+/* --- #INPUTS --- */
+$nb-input-border-radius: $nb-radius-default;
+$nb-input-border-width: 1px;
+$nb-input-height: 44px;
+$nb-input-padding: 12px 16px;
+/*$nb-input-padding-password: 9px 45px 9px 12px;*/
+
+$nb-input-color: $nb-dark-green;
+$nb-input-border-color: $nb-gray-0;
+$nb-input-color-placeholder: $nb-main-brand-color;
+
+$nb-input-hover-bg: $nb-white;
+$nb-input-hover-border: $nb-main-brand-color;
+
+$nb-input-focus-bg: $nb-white;
+$nb-input-focus-border: $nb-main-brand-color;
+
+$nb-input-disabled-bg: $nb-gray-2;
+$nb-input-disabled-border: $nb-gray-0;
+$nb-input-disabled-color: $nb-main-brand-color;
+
+$nb-input-error-border: $nb-error-color;
+$nb-input-error-color: $nb-black;
+
+$nb-input-pwd-letter-spacing: 5px;
+$nb-input-pwd-color: $nb-dark-green-1;
+$nb-icon-show-pass-font-size: 20px;
+$nb-icon-show-pass-color: $nb-dark-green;
+
+

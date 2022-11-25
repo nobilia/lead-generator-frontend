@@ -16,5 +16,5 @@ export class DashboardLoginComponent extends LoginFormComponent {
   }
 
   data$: Observable<CmsDashboardLoginComponent> = this.component.data$;
-
+  hide = true;
 }

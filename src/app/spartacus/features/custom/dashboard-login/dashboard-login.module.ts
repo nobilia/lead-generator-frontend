@@ -7,6 +7,7 @@ import {RouterModule} from "@angular/router";
 import {ReactiveFormsModule} from "@angular/forms";
 import {LoginFormComponentService} from "@spartacus/user/account/components";
 import {customTranslationChunksConfig, customTranslations} from "../../../../../assets/translations/translations";
+import {SharedModule} from "../../../../shared/shared.module";
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import {customTranslationChunksConfig, customTranslations} from "../../../../../
     UrlModule,
     RouterModule,
     ReactiveFormsModule,
-    FormErrorsModule
+    FormErrorsModule,
+    SharedModule
   ]
 })
 export class DashboardLoginModule {
