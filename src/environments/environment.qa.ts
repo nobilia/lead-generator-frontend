@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   occBaseUrl:
-    'FIX_ME',
-  authClientId: 'FIX_ME',
-  authClientSecret: 'FIX_ME'
+    'https://qas.lead-gen.nobilia.aws-arvato.com',
+  authClientId: 'mobile_android',
+  authClientSecret: 'secret'
 };
