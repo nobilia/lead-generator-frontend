@@ -36,9 +36,13 @@
               }
             ],
             "styles": [
-              "src/styles.scss",
-              "src/styles/spartacus/user.scss"
+              "src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
+            },
             "scripts": []
           },
           "configurations": {

@@ -1,12 +1,17 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {DashboardLoginComponent} from './dashboard-login-component/dashboard-login.component';
-import {CmsConfig, ConfigModule, I18nConfig, I18nModule, UrlModule} from "@spartacus/core";
-import {FormErrorsModule, LayoutConfig, MediaModule, SpinnerModule} from "@spartacus/storefront";
+import {CmsConfig, ConfigModule, I18nModule, UrlModule} from "@spartacus/core";
+import {
+  FormErrorsModule, IconModule,
+  LayoutConfig,
+  MediaModule,
+  SpinnerModule
+} from "@spartacus/storefront";
 import {RouterModule} from "@angular/router";
 import {ReactiveFormsModule} from "@angular/forms";
 import {LoginFormComponentService} from "@spartacus/user/account/components";
-import {customTranslationChunksConfig, customTranslations} from "../../../../../assets/translations/translations";
+import {SharedModule} from "../../../../shared/shared.module";
 
 
 @NgModule({
@@ -39,7 +44,9 @@ import {customTranslationChunksConfig, customTranslations} from "../../../../../
     UrlModule,
     RouterModule,
     ReactiveFormsModule,
-    FormErrorsModule
+    FormErrorsModule,
+    IconModule,
+    SharedModule
   ]
 })
 export class DashboardLoginModule {

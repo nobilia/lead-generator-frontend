@@ -3,12 +3,14 @@ import {LoginFormComponent, LoginFormComponentService} from "@spartacus/user/acc
 import {CmsDashboardLoginComponent} from "./dashboard-login.model";
 import {CmsComponentData} from "@spartacus/storefront";
 import {Observable} from "rxjs";
+import {ICON_TYPE} from '../../../../../shared/index'
 
 @Component({
   selector: 'app-dashboard-login',
   templateUrl: './dashboard-login.component.html',
   styleUrls: ['./dashboard-login.component.scss']
 })
+
 export class DashboardLoginComponent extends LoginFormComponent {
 
   constructor(protected service: LoginFormComponentService, protected component: CmsComponentData<CmsDashboardLoginComponent>) {
@@ -16,5 +18,6 @@ export class DashboardLoginComponent extends LoginFormComponent {
   }
 
   data$: Observable<CmsDashboardLoginComponent> = this.component.data$;
-
+  hide = true;
+  iconType = ICON_TYPE;
 }
