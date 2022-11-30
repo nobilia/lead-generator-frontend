@@ -21,7 +21,7 @@ use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 ## Build
 
 - `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-- `ng qa` to build the project for qas
+- `yarn qa` to build the project for qas
 
 ## Running unit tests
 
