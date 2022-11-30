@@ -36,8 +36,7 @@
               }
             ],
             "styles": [
-              "src/styles.scss",
-              "src/assets/fonts/fontello/css/nb-icons-font.css"
+              "src/styles.scss"
             ],
             "stylePreprocessorOptions": {
               "includePaths": [

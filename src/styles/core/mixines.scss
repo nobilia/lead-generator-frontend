@@ -56,14 +56,6 @@
   line-height: $line-height;
 }
 
-@mixin fontello-icon($content) {
-  content: $content;
-  line-height: 1;
-  font-family: "nb-icons-font";
-  font-style: normal;
-  font-weight: normal;
-}
-
 /* --- #INPUT MIXINS --- */
 @mixin input-font-style() {
   @include font-style(500, 14px, 20px);

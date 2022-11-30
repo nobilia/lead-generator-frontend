@@ -82,12 +82,12 @@ input[type="password"] {
     align-items: center;
     top: 0;
     right: 14px;
+    cursor: pointer;
 
-    i {
-      &:before {
-        font-size: $nb-icon-show-pass-font-size;
-        color: $nb-icon-show-pass-color;
-      }
+    cx-icon svg {
+      @include size($nb-icon-show-pass-size);
+
+      color: $nb-icon-show-pass-color;
     }
   }
 }

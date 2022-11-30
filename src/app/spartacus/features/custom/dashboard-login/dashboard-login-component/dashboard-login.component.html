@@ -37,8 +37,8 @@
                 }}
               </label>
               <div class="show-pass" (click)="hide = !hide">
-                <i class="icon-nb-eye-off" [ngClass]="hide ? '' : 'd-none'"></i>
-                <i class="icon-nb-eye-on" [ngClass]="hide ? 'd-none' : ''"></i>
+                <cx-icon [type]="iconType.EYE_ON" [ngClass]="hide ? '' : 'd-none'"></cx-icon>
+                <cx-icon [type]="iconType.EYE_OFF" [ngClass]="hide ? 'd-none' : ''"></cx-icon>
               </div>
               <cx-form-errors [control]="$any(form.get('password'))"></cx-form-errors>
 
