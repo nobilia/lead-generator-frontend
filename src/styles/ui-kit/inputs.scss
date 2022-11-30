@@ -1,0 +1,126 @@
+input,
+textarea,
+.form-control {
+  @include input-font-style();
+  @include size($nb-input-height, 100%);
+  @include input-radius();
+
+  padding: $nb-input-padding;
+  color: $nb-input-color;
+  border: $nb-input-border-width solid $nb-input-border-color;
+  transition: 0.2s;
+  outline: none;
+
+  &:hover {
+    border-color: $nb-input-hover-border;
+    background-color: $nb-input-hover-bg;
+  }
+
+  &:focus {
+    border-color: $nb-input-focus-border;
+    background-color: $nb-input-focus-bg;
+  }
+
+  &:disabled {
+    border-color: $nb-input-disabled-border;
+    color: $nb-input-disabled-color;
+    background-color: $nb-input-disabled-bg;
+    cursor: not-allowed;
+  }
+
+  &.error,
+  &.ng-invalid.ng-touched{
+    color: $nb-input-error-color;
+    border-color: $nb-input-error-border;
+
+    &:hover,
+    &:focus {
+      border-color: $nb-input-error-border;
+    }
+  }
+
+  &::placeholder {
+    @include input-font-style-placeholder();
+
+    color: $nb-input-color-placeholder;
+    text-transform: uppercase;
+  }
+
+  & ~ .control-invalid {
+    &, & > p {
+      @include font-style(500, 13px, 16px);
+
+      color: $nb-error-color;
+      padding-left: 0;
+      margin: 8px 0;
+
+      &:before,
+      &:after {
+        content: none;
+      }
+    }
+  }
+}
+
+input[type="password"] {
+  letter-spacing: $nb-input-pwd-letter-spacing;
+  color: $nb-input-pwd-color;
+  font-size: 18px;
+
+  &::placeholder {
+    letter-spacing: normal;
+  }
+}
+
+.password-input-group {
+  position: relative;
+
+  .show-pass {
+    position: absolute;
+    height: $nb-input-height;
+    display: flex;
+    align-items: center;
+    top: 0;
+    right: 14px;
+
+    i {
+      &:before {
+        font-size: $nb-icon-show-pass-font-size;
+        color: $nb-icon-show-pass-color;
+      }
+    }
+  }
+}
+
+.form-floating {
+  position: relative;
+
+  input {
+    & ~ .control-label {
+      @include input-font-style-placeholder();
+
+      color: $nb-input-color-placeholder;
+      text-transform: uppercase;
+      position: absolute;
+      pointer-events: none;
+      z-index: 1;
+      background: $nb-white;
+      left: 24px;
+      top: 13px;
+      margin-bottom: 0;
+      transition: all 250ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    }
+
+    &.float-label {
+      & ~ .control-label {
+        @include input-font-style-placeholder-active();
+
+        letter-spacing: 0.08em;
+        top: -10px;
+        left: 16px;
+        padding: 2px 6px;
+      }
+    }
+
+  }
+}
