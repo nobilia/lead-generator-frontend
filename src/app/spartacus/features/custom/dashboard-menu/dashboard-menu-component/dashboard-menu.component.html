@@ -1,0 +1,18 @@
+<ng-container *ngIf="data$ | async as data">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <cx-media [container]="data.siteLogo" class="logo"></cx-media>
+        {{ 'dashboardMenuTitle.placeholder' | cxTranslate }}
+        <cx-navigation-ui *ngIf="node$ | async as node"
+                          [node]="node"
+                          [ngClass]="(styleClass$ | async) ?? ''">
+        </cx-navigation-ui>
+        <cx-navigation-ui *ngIf="additionalNode$ | async as addNode"
+                          [node]="addNode"
+                          [ngClass]="(styleClass$ | async) ?? ''">
+        </cx-navigation-ui>
+      </div>
+    </div>
+  </div>
+</ng-container>
