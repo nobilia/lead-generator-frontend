@@ -58,6 +58,7 @@ import {
 import {UserFeatureModule} from './features/user/user-feature.module';
 import {SmartEditFeatureModule} from './features/smartedit/smart-edit-feature.module';
 import {RoutingModule} from "./features/custom/routing/routing.module";
+import {CmsComponentsModule} from "./storefrontlib/cms-components/cms-components.module";
 
 @NgModule({
   declarations: [],
@@ -130,6 +131,7 @@ import {RoutingModule} from "./features/custom/routing/routing.module";
 
     // Custom
     RoutingModule,
+    CmsComponentsModule,
     ConfigModule.withConfig({
       featureModules: {
         dashboardLogin: {
