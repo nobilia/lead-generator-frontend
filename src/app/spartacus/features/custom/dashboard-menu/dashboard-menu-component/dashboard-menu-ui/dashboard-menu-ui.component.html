@@ -1,0 +1,67 @@
+<nav [attr.aria-label]="navAriaLabel">
+  <ng-container *ngFor="let nodeChild of node?.children">
+    <ng-container *ngFor="let child of nodeChild?.children">
+      <ul>
+        <ng-container *ngTemplateOutlet="nav; context: { node: child, depth: 0 }">
+        </ng-container>
+      </ul>
+    </ng-container>
+  </ng-container>
+</nav>
+
+
+<ng-template #nav let-node="node" let-depth="depth">
+  <li [ngClass]="node.url === document.location.pathname ? 'active' : ''">
+    <div class="dashboard-icon">
+      <cx-icon [type]="node.styleClasses"></cx-icon>
+    </div>
+
+    <cx-generic-link
+      *ngIf="
+        node.url && (!node.children || node.children?.length === 0);
+        else heading
+      "
+      [url]="node.url"
+      [target]="node.target"
+      [style]="node.styleAttributes"
+      [class]="node.styleClasses"
+      (click)="super.closeIfClickedTheSameLink(node)"
+    >
+      {{ node.title }}
+    </cx-generic-link>
+
+    <ng-template #heading>
+      <ng-container *ngIf="flyout && node.children?.length > 0; else title">
+        <cx-generic-link
+          *ngIf="node.url"
+          [url]="node.url"
+          [target]="node.target"
+          (click)="super.closeIfClickedTheSameLink(node)"
+        >
+          {{ node.title }}
+        </cx-generic-link>
+      </ng-container>
+      <ng-template #title>
+        <span [attr.tabindex]="-1">
+          {{ node.title }}
+        </span>
+      </ng-template>
+    </ng-template>
+
+      <div class="wrapper" *ngIf="node.children && node.children.length > 0">
+        <ul
+          class="childs"
+          [attr.depth]="getTotalDepth(node)"
+          [attr.wrap-after]="node.children.length > wrapAfter ? wrapAfter : null"
+          [attr.columns]="getColumnCount(node.children.length)"
+        >
+          <ng-container *ngFor="let child of node.children">
+            <ng-container
+              *ngTemplateOutlet="nav; context: { node: child, depth: depth + 1 }"
+            >
+            </ng-container>
+          </ng-container>
+        </ul>
+      </div>
+  </li>
+</ng-template>

@@ -18,7 +18,7 @@ export const matIconConfig: IconConfig = {
       {
         type: IconResourceType.SVG,
         url: "./assets/sprite.svg",
-        types: [ICON_TYPE.EYE_ON, ICON_TYPE.EYE_OFF],
+        types: [ICON_TYPE.EYE_ON, ICON_TYPE.EYE_OFF, ICON_TYPE.LOGOUT, ICON_TYPE.INVOICES, ICON_TYPE.KEY, ICON_TYPE.SKIPPED_LEADS,ICON_TYPE.LEADS, ICON_TYPE.AVAILABLE_LEADS],
       },
     ],
   },

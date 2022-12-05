@@ -1,14 +1,24 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {DashboardMenuComponent} from './dashboard-menu-component/dashboard-menu.component';
-import {CmsConfig, ConfigModule, I18nConfig, I18nModule, UrlModule} from "@spartacus/core";
-import {LayoutConfig, MediaModule, NavigationService, IconModule, GenericLinkModule, NavigationModule} from "@spartacus/storefront";
+import {CmsConfig, ConfigModule, I18nModule} from "@spartacus/core";
+import {
+  LayoutConfig,
+  MediaModule,
+  NavigationService,
+  IconModule,
+  GenericLinkModule,
+  NavigationModule,
+  HamburgerMenuModule
+} from "@spartacus/storefront";
 import { RouterModule } from '@angular/router';
-import {customTranslationChunksConfig, customTranslations} from "../../../../../assets/translations/translations";
+import { DashboardMenuUiComponent } from './dashboard-menu-component/dashboard-menu-ui/dashboard-menu-ui.component';
+import {SharedModule} from "../../../../shared/shared.module";
 
 @NgModule({
   declarations: [
-    DashboardMenuComponent
+    DashboardMenuComponent,
+    DashboardMenuUiComponent
   ],
   imports: [
     CommonModule,
@@ -39,7 +49,9 @@ import {customTranslationChunksConfig, customTranslations} from "../../../../../
     GenericLinkModule,
     MediaModule,
     I18nModule,
-    NavigationModule
+    NavigationModule,
+    SharedModule,
+    HamburgerMenuModule
   ]
 })
 

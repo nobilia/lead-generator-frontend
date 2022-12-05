@@ -1,18 +1,30 @@
 <ng-container *ngIf="data$ | async as data">
-  <div class="container">
-    <div class="row">
-      <div class="col">
+  <cx-hamburger-menu></cx-hamburger-menu>
+  <div class="menu-header">
+    <div class="menu-header__logo menu-logo">
+      <cx-media [container]="data.siteLogo" class="logo"></cx-media>
+    </div>
+    <div class="menu-header__title">
+      {{ 'dashboardMenuTitle.placeholder' | cxTranslate }}
+    </div>
+  </div>
+  <div class="dashboard-menu">
+    <div class="dashboard-menu__top">
+      <div class="dashboard-menu__logo menu-logo">
         <cx-media [container]="data.siteLogo" class="logo"></cx-media>
-        {{ 'dashboardMenuTitle.placeholder' | cxTranslate }}
-        <cx-navigation-ui *ngIf="node$ | async as node"
-                          [node]="node"
-                          [ngClass]="(styleClass$ | async) ?? ''">
-        </cx-navigation-ui>
-        <cx-navigation-ui *ngIf="additionalNode$ | async as addNode"
-                          [node]="addNode"
-                          [ngClass]="(styleClass$ | async) ?? ''">
-        </cx-navigation-ui>
       </div>
+      <div class="dashboard-menu__title">
+        {{ 'dashboardMenuTitle.placeholder' | cxTranslate }}
+      </div>
+      <div class="dashboard-menu__user" [title]="user">
+        {{user}}
+      </div>
+    </div>
+    <div class="dashboard-menu__list">
+      <app-dashboard-menu-ui *ngIf="node$ | async as node"
+                             [node]="node"
+                             [ngClass]="(styleClass$ | async) ?? ''">
+      </app-dashboard-menu-ui>
     </div>
   </div>
 </ng-container>
