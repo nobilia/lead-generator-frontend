@@ -1,11 +1,9 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {DashboardMenuComponent} from './dashboard-menu-component/dashboard-menu.component';
-import {CmsConfig, ConfigModule, I18nModule} from "@spartacus/core";
+import {I18nModule} from "@spartacus/core";
 import {
-  LayoutConfig,
   MediaModule,
-  NavigationService,
   IconModule,
   GenericLinkModule,
   NavigationModule,
@@ -22,28 +20,6 @@ import {SharedModule} from "../../../../shared/shared.module";
   ],
   imports: [
     CommonModule,
-    ConfigModule.withConfig({
-      layoutSlots: {
-        DashboardPageTemplate: {
-          slots: [
-            'NavigationMenu',
-            'MainContent',
-          ]
-        },
-      },
-    } as LayoutConfig),
-    ConfigModule.withConfig({
-      cmsComponents: {
-        NobiliaDashboardMenuComponent: {
-          component: DashboardMenuComponent,
-          providers: [
-            {
-              provide: NavigationService
-            }
-          ]
-        },
-      },
-    } as CmsConfig),
     RouterModule,
     IconModule,
     GenericLinkModule,

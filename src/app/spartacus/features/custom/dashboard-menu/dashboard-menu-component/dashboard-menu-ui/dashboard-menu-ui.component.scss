@@ -33,9 +33,9 @@ nav {
 
       &:after {
         @include size(6px);
+        @include full-circle-radius();
 
         content: '';
-        border-radius: 20px;
         background: $nb-green;
         margin-left: 9px;
       }

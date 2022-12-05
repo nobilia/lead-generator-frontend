@@ -16,8 +16,8 @@
       <div class="dashboard-menu__title">
         {{ 'dashboardMenuTitle.placeholder' | cxTranslate }}
       </div>
-      <div class="dashboard-menu__user" [title]="user">
-        {{user}}
+      <div *ngIf="user$ | async as user" class="dashboard-menu__user" [title]="user.uid">
+        {{user.uid}}
       </div>
     </div>
     <div class="dashboard-menu__list">
