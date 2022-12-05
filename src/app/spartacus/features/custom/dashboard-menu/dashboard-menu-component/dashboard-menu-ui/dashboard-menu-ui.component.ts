@@ -11,12 +11,9 @@ import {DOCUMENT} from "@angular/common";
 export class DashboardMenuUiComponent extends NavigationUIComponent {
 
   @Input() navAriaLabel: string | null | undefined;
-
-
-
   super: any;
+
   constructor(@Inject(DOCUMENT) public document: any, router: Router, renderer: Renderer2, elemRef: ElementRef, hamburgerMenuService: HamburgerMenuService) {
     super( router, renderer, elemRef, hamburgerMenuService);
-    console.log(this.document.location)
   }
 }
