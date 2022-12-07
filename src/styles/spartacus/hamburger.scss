@@ -1,0 +1,28 @@
+@import "core";
+
+cx-hamburger-menu {
+  display: flex;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+
+  @include desktop-min {
+    display: none;
+  }
+
+  .hamburger, .cx-hamburger {
+    padding: 18px 17px;
+  }
+
+  .hamburger-box {
+    height: 12px;
+  }
+
+  .hamburger-inner {
+    &,
+    &::before,
+    &::after {
+      @include size(2px, 26px);
+    }
+  }
+}

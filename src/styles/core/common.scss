@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  --cx-color-primary: $nb-main-brand-color;
+  --cx-color-danger: $nb-error-color;
+  --cx-buttons-border-radius: 50px;
+  --cx-color-background-focus: none;
+}
+
+a {
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+.dashboard-icon {
+  cx-icon svg {
+    @include size(17px);
+  }
+}

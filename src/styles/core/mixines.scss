@@ -1,0 +1,122 @@
+@mixin size($height: auto, $width: $height ) {
+  height: $height;
+  width: $width;
+}
+
+/* --- #BUTTONS MIXINS --- */
+@mixin button-variant-customize($color, $background, $border, $hoverColor, $hoverBorder, $hoverBackground, $disabledBackground, $activeBorder: $hoverBorder, $activeBackground: $hoverBackground, $activeColor: $hoverColor ) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    color: $hoverColor;
+    background-color: $hoverBackground;
+    border-color: $hoverBorder;
+  }
+
+  &.disabled,
+  &[disabled],
+  &.not-active,
+  fieldset[disabled] & {
+    pointer-events: none;
+
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      color: $color;
+      background-color: $disabledBackground;
+      border-color: $disabledBackground;
+    }
+  }
+}
+
+@mixin btn-main-color() {
+  @include button-variant-customize($nb-white, $nb-main-brand-color, $nb-main-brand-color, $nb-white, $nb-primary-btn-hover-color, $nb-primary-btn-hover-color, $nb-btn-disabled-background, $nb-main-brand-pressed-color, $nb-main-brand-pressed-color);
+}
+
+@mixin btn-outline() {
+  @include button-variant-customize($nb-outline-btn-color, $nb-link-color, $nb-outline-btn-border, $nb-outline-btn-color, $nb-outline-btn-hover-border, $nb-outline-btn-hover-background, $nb-btn-disabled-background, $nb-outline-btn-hover-background, $nb-outline-btn-hover-border);
+}
+
+@mixin btn-tertiary {
+  @include button-variant-customize($nb-link-color, $nb-white, $nb-white, $nb-link-color, $nb-tertiary-btn-hover-border, $nb-tertiary-btn-hover-background, $nb-btn-disabled-background, $nb-tertiary-btn-hover-border, $nb-tertiary-btn-hover-background);
+}
+
+/* --- #FONTS MIXINS --- */
+@mixin font-style($weight, $size, $line-height: $size, $family: $nb-font-family) {
+  font-family: $family, sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height;
+}
+
+/* --- #INPUT MIXINS --- */
+@mixin input-font-style() {
+  @include font-style(500, 14px, 20px);
+}
+
+@mixin input-font-style-placeholder() {
+  @include font-style(600, 12px, 20px);
+}
+
+@mixin input-font-style-placeholder-active() {
+  @include font-style(700, 10px, 20px);
+}
+
+/* --- #ELEMENTS RADIUS MIXINS --- */
+@mixin border-radius($top-left, $top-right: $top-left, $bottom-right: $top-left, $bottom-left: $top-left) {
+  border-top-left-radius:             $top-left;
+  border-top-right-radius:            $top-right;
+  border-bottom-right-radius:         $bottom-right;
+  border-bottom-left-radius:          $bottom-left;
+}
+
+@mixin border-radius-none($radius: unset) {
+  @include border-radius($radius);
+}
+
+@mixin border-radius-0($radius: 0) {
+  @include border-radius($radius);
+}
+
+@mixin border-radius-default($top-left: $nb-radius-default, $top-right: $top-left, $bottom-right: $top-left, $bottom-left: $top-left) {
+  @include border-radius($top-left);
+}
+
+@mixin input-radius($top-left, $top-right: $top-left, $bottom-right: $top-left, $bottom-left: $top-left) {
+  @include border-radius($top-left, $top-right: $top-left, $bottom-right: $top-left, $bottom-left: $top-left);
+}
+
+@mixin input-radius() {
+  @include border-radius-default($nb-input-border-radius);
+}
+
+@mixin radio-button-radius() {
+  @include full-circle-radius();
+}
+
+@mixin checkbox-radius($top-left, $top-right: $top-left, $bottom-right: $top-left, $bottom-left: $top-left) {
+  @include border-radius($top-left, $top-right: $top-left, $bottom-right: $top-left, $bottom-left: $top-left);
+}
+
+@mixin checkbox-radius() {
+  @include border-radius-default($nb-checkbox-border-radius);
+}
+
+@mixin button-radius($top-left, $top-right: $top-left, $bottom-right: $top-left, $bottom-left: $top-left) {
+  @include border-radius($top-left, $top-right: $top-left, $bottom-right: $top-left, $bottom-left: $top-left);
+}
+
+@mixin button-radius() {
+  @include border-radius-default($nb-button-border-radius);
+}
+
+@mixin full-circle-radius() {
+  @include border-radius(50%);
+}

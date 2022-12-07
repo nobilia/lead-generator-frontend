@@ -1,0 +1,48 @@
+@import "core";
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+nav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  ul.childs > li {
+    @include font-style(600, 12px, 20px);
+
+    color: $nb-dark-brown;
+    text-transform: uppercase;
+    background: $nb-dark-green-2;
+    padding: 20px 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      color: $nb-white;
+    }
+
+    &.active {
+      color: $nb-white;
+      background: $nb-dark-brown;
+
+      &:after {
+        @include size(6px);
+        @include full-circle-radius();
+
+        content: '';
+        background: $nb-green;
+        margin-left: 9px;
+      }
+    }
+  }
+}
+
+.dashboard-icon {
+  padding-right: 20px;
+}
