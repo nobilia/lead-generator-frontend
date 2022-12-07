@@ -10,3 +10,18 @@ body {
   --cx-buttons-border-radius: 50px;
   --cx-color-background-focus: none;
 }
+
+a {
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+.dashboard-icon {
+  cx-icon svg {
+    @include size(17px);
+  }
+}

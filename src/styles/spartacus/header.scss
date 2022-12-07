@@ -1,0 +1,27 @@
+@import "core";
+
+header {
+  display: none;
+
+  &.is-expanded {
+    & ~ main {
+      .dashboard-menu {
+        display: flex;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+      }
+
+      &:before {
+        @include size(100vh, 100vw);
+
+        content: '';
+        position: absolute;
+        top: 0;
+        background: $nb-black;
+        opacity: .64;
+        z-index: -1;
+      }
+    }
+  }
+}

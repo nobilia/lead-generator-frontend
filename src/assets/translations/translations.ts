@@ -9,6 +9,9 @@ export const customTranslationChunksConfig: TranslationChunksConfig = {
   dashboardLogin: [
     'dashboardLoginForm'
   ],
+  dashboardMenu: [
+    'dashboardMenuTitle'
+  ],
   customCommon: [
     'httpHandlers','formErrors'
   ]

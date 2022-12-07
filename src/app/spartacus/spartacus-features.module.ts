@@ -140,6 +140,15 @@ import {RoutingModule} from "./features/custom/routing/routing.module";
           cmsComponents: [
             'NobiliaDashboardLoginComponent'
           ],
+        },
+        dashboardPage: {
+          module: () =>
+            import('./features/custom/dashboard-menu/dashboard-page.module').then(
+              (m) => m.DashboardPageModule
+            ),
+          cmsComponents: [
+            'NobiliaDashboardMenuComponent'
+          ],
         }
       },
     } as CmsConfig),

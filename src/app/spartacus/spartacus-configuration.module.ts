@@ -10,9 +10,11 @@ import {
   provideConfig,
   SiteContextConfig
 } from "@spartacus/core";
-import {defaultCmsContentProviders, LayoutConfig, layoutConfig, mediaConfig} from "@spartacus/storefront";
+import {LayoutConfig, layoutConfig, mediaConfig} from "@spartacus/storefront";
 import {environment} from 'src/environments/environment';
 import {customTranslationChunksConfig, customTranslations} from "../../assets/translations/translations";
+import {defaultCmsContentProviders} from "../core";
+
 
 
 @NgModule({
