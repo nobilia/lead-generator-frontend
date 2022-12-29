@@ -16,7 +16,6 @@ import {customTranslationChunksConfig, customTranslations} from "../../assets/tr
 import {defaultCmsContentProviders} from "../core";
 
 
-
 @NgModule({
   declarations: [],
   imports: [
@@ -32,6 +31,9 @@ import {defaultCmsContentProviders} from "../core";
     backend: {
       occ: {
         baseUrl: environment.occBaseUrl,
+        endpoints: {
+          availableLeadsObserver: '/auction/lot/observer?sessionToken=${sessionToken}'
+        }
       }
     },
   }), provideConfig(<SiteContextConfig>{
