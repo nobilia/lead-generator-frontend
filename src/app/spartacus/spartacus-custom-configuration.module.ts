@@ -9,6 +9,7 @@ import {LoginFormComponentService} from "@spartacus/user/account/components";
 import {
   DashboardMenuComponent
 } from "./features/custom/dashboard-menu/dashboard-menu-component/dashboard-menu.component";
+import {CustomLoginFormComponentService} from "./services/custom.login-form-component.service";
 
 
 @NgModule({
@@ -28,7 +29,7 @@ import {
           component: DashboardLoginComponent,
           providers: [
             {
-              provide: LoginFormComponentService
+              provide: CustomLoginFormComponentService
             }]
         },
       },

@@ -3,12 +3,14 @@ import {CommonModule} from '@angular/common';
 import {SimpleTitleComponent} from "./simple-title-component/simple-title.component";
 import {AuthGuard, CmsConfig, ConfigModule} from "@spartacus/core";
 import { DashboardLeadsComponent } from './dashboard-leads-component/dashboard-leads.component';
+import { DashboardSkippedLotsComponent } from './dashboard-skipped-lots-component/dashboard-skipped-lots.component';
 
 
 @NgModule({
   declarations: [
     SimpleTitleComponent,
-    DashboardLeadsComponent
+    DashboardLeadsComponent,
+    DashboardSkippedLotsComponent
   ],
   imports: [
     CommonModule,
@@ -19,6 +21,10 @@ import { DashboardLeadsComponent } from './dashboard-leads-component/dashboard-l
         },
         NobiliaDashboardLeadsComponent: {
           component: DashboardLeadsComponent,
+          guards: [AuthGuard]
+        },
+        nobiliaSkippedLeadsComponent: {
+          component: DashboardSkippedLotsComponent,
           guards: [AuthGuard]
         },
       },

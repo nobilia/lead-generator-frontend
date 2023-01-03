@@ -6,11 +6,11 @@ import {Observable} from "rxjs";
 import {CustomUser} from "../../../models/user.model";
 
 @Component({
-  selector: 'app-dashboard-leads.component',
-  templateUrl: './dashboard-leads.component.html',
-  styleUrls: ['./dashboard-leads.component.scss']
+  selector: 'app-dashboard-skipped-lots.component',
+  templateUrl: './dashboard-skipped-lots.component.html',
+  styleUrls: ['./dashboard-skipped-lots.component.scss']
 })
-export class DashboardLeadsComponent implements OnInit {
+export class DashboardSkippedLotsComponent implements OnInit {
 
   constructor(
     private sseService: SseService,
@@ -26,14 +26,14 @@ export class DashboardLeadsComponent implements OnInit {
     this.user$.subscribe((user) => {
       if (user) {
         let sessionId = localStorage.getItem('sessionId');
-        const url = this.occEndpoints.buildUrl('availableLotsObserver', {
+
+        const skippedLotsObserverUrl = this.occEndpoints.buildUrl('skippedLotsObserver', {
           queryParams: {sessionToken: user.sessionToken, sessionId: sessionId}
         });
         this.sseService
-          .getServerSentEvent(url)
-          .subscribe(message => console.log("available lots were changed. Id:" + message.data))
+          .getServerSentEvent(skippedLotsObserverUrl)
+          .subscribe(message => console.log("skipped lots were changed. Id:" + message.data));
       }
     });
   }
-
 }
