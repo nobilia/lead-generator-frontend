@@ -1,0 +1,24 @@
+@import "core";
+
+.DefaultDashboardTemplate {
+  display: flex;
+
+  @include desktop {
+    flex-direction: column;
+  }
+}
+
+cx-page-layout cx-page-slot {
+  flex: 0 0 auto;
+}
+
+.NavigationMenu {
+  order: -1;
+}
+
+.MainContent {
+  flex-grow: 1;
+  flex-shrink: 1;
+  max-height: 100vh;
+  overflow-y: auto;
+}

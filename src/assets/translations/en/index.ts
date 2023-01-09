@@ -1,7 +1,11 @@
+import {customCommon} from './customCommon';
 import {dashboardLogin} from './dashboard-login.i18n';
 import {dashboardMenu} from './dashboard-menu.i18n';
-import {customCommon} from './customCommon';
+import {dashboardLeads} from "./dashboard-leads.i18n";
 
 export const en = {
-  dashboardLogin, dashboardMenu, customCommon
+  customCommon,
+  dashboardLogin,
+  dashboardMenu,
+  dashboardLeads
 };

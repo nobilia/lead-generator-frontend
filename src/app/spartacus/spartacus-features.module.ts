@@ -59,6 +59,7 @@ import {UserFeatureModule} from './features/user/user-feature.module';
 import {SmartEditFeatureModule} from './features/smartedit/smart-edit-feature.module';
 import {RoutingModule} from "./features/custom/routing/routing.module";
 import {CmsComponentsModule} from "./storefrontlib/cms-components/cms-components.module";
+import { ProductImageZoomFeatureModule } from './features/product/product-image-zoom-feature.module';
 
 @NgModule({
   declarations: [],
@@ -154,6 +155,7 @@ import {CmsComponentsModule} from "./storefrontlib/cms-components/cms-components
         }
       },
     } as CmsConfig),
+    ProductImageZoomFeatureModule,
   ]
 })
 export class SpartacusFeaturesModule {

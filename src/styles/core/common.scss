@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 *,
 *::before,
 *::after {
@@ -23,5 +25,17 @@ a {
 .dashboard-icon {
   cx-icon svg {
     @include size(17px);
+  }
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+h1 {
+  @include heading1-mobile();
+
+  @include desktop-min {
+    @include heading1-desktop();
   }
 }
