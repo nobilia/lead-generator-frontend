@@ -1,0 +1,14 @@
+<div class="time-left" *ngIf="(timeLeft$ | async) as time;">
+  <div class="time-left__element">
+    <p id="hours"> {{time.hoursToDday}} </p>
+    {{ 'dashboardLeadsTable.time.hours' | cxTranslate }}
+  </div>
+  <div class="time-left__element">
+    <p id="minutes"> {{time.minutesToDday}} </p>
+    {{ 'dashboardLeadsTable.time.minute' | cxTranslate }}
+  </div>
+  <div class="time-left__element">
+    <p id="seconds"> {{time.secondsToDday}} </p>
+    {{ 'dashboardLeadsTable.time.second' | cxTranslate }}
+  </div>
+</div>

@@ -40,7 +40,8 @@ import {CustomLoginFormComponentService} from "./services/custom.login-form-comp
           baseUrl: environment.occBaseUrl,
           endpoints: {
             availableLotsObserver: '/auction/lots/observer?sessionToken=${sessionToken}&sessionId=${sessionId}',
-            skippedLotsObserver: '/auction/skipped/lots/observer?sessionToken=${sessionToken}&sessionId=${sessionId}'
+            skippedLotsObserver: '/auction/skipped/lots/observer?sessionToken=${sessionToken}&sessionId=${sessionId}',
+            availableLeads: '/users/${userId}/auction/lots/available'
           }
         }
       },

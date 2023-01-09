@@ -1,0 +1,205 @@
+.dashboard-leads {
+  background: $nb-gray-green;
+
+  &__wrapper { //dashboard-leads__wrapper
+    padding: 28px 30px;
+
+    @include desktop {
+      padding-left: 17px;
+      padding-right: 17px;
+    }
+
+    @include tablet {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+}
+
+table.leads-list {
+  thead {
+    @include tablet {
+      display: none;
+    }
+
+    tr:first-child {
+      @include font-style(600, 11px, 16px);
+
+      text-transform: uppercase;
+      color: $nb-gray-1;
+      background: $nb-main-brand-color;
+      height: 48px;
+
+      td {
+        padding: 0 10px;
+        text-align: center;
+
+        &:first-child {
+          @include border-radius(4px, 0, 0);
+
+          text-align: left;
+        }
+
+        &:last-child {
+          @include border-radius(0, 4px, 0, 0);
+        }
+      }
+    }
+  }
+
+  tbody {
+    @include font-style(500, 13px, 16px);
+
+    color: $nb-dark-green;
+
+    tr {
+      @include tablet {
+        @include border-radius(4px);
+
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08);
+        margin-bottom: 20px;
+      }
+
+      &:nth-child(even) {
+        background: $nb-gray-1;
+      }
+
+      &:nth-child(odd) {
+        background: $nb-white;
+      }
+
+      td {
+        padding: 12px;
+
+        @include tablet {
+          display: flex;
+          gap: 12px;
+          padding: 12px;
+          background: $nb-gray-1;
+          border-bottom: 1px solid $nb-gray-2;
+
+          &:first-child {
+            @include border-radius(4px, 4px, 0, 0);
+
+            background: $nb-white;
+          }
+
+          &:last-child {
+            @include border-radius(0, 0, 4px, 4px);
+
+            background: $nb-white;
+            padding: 16px 12px;
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.leads-list {
+  width: 100%;
+
+  &__sort-icons { //leads-list__sort-icons
+    padding: 5px;
+    margin-left: 8px;
+
+
+    &_active {
+      @include border-radius(4px);
+
+      background: $nb-orange;
+    }
+
+    svg {
+      @include size(10px);
+    }
+  }
+
+  &__img { //leads-list__img
+    @include size(72px, 100px);
+
+    img {
+      @include size(72px, 100px);
+
+      object-fit: cover;
+    }
+  }
+
+  &__description { //leads-list__description
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  &__name { //leads-list__name
+    @include font-style(500, 14px, 20px);
+
+    color: $nb-dark-green;
+  }
+
+  &__plan { //leads-list__plan
+    @include font-style(700, 12px, 20px);
+
+    color: $nb-link-color;
+    margin-top: 4px;
+  }
+
+  &__postcode, //leads-list__postcode
+  &__budget, //leads-list__budget
+  &__price { //leads-list__price
+    text-align: center;
+  }
+
+  &__buttons { //leads-list__buttons
+    display: flex;
+    gap: 12px;
+
+    @include tablet {
+      & > * {
+        flex: 1 1 auto;
+      }
+    }
+
+    button {
+      width: auto;
+    }
+  }
+
+  &__info { //leads-list__info
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    @include desktop-min {
+      @include full-circle-radius();
+
+      width: 36px;
+      min-width: 36px;
+
+      span {
+        display: none;
+      }
+    }
+
+    svg {
+      @include size(16px);
+    }
+  }
+
+  &__mobile-title { //leads-list__mobile-title
+    @include font-style(500, 13px, 16px);
+
+    color: $nb-main-brand-color;
+    width: 95px;
+    text-align: left;
+
+    @include desktop-min {
+      display: none;
+    }
+  }
+}

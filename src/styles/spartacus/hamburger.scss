@@ -1,13 +1,13 @@
 @import "core";
 
 cx-hamburger-menu {
-  display: flex;
+  display: none;
   position: absolute;
   top: 0;
   z-index: 2;
 
-  @include desktop-min {
-    display: none;
+  @include desktop {
+    display: flex;
   }
 
   .hamburger, .cx-hamburger {
