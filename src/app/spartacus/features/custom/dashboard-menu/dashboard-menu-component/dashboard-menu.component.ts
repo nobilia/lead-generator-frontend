@@ -13,7 +13,6 @@ import {User, UserAccountFacade} from "@spartacus/user/account/root";
 export class DashboardMenuComponent extends NavigationComponent {
 
   data$: Observable<CmsDashboardMenuComponent> = this.componentData.data$;
-  user: string = 'dashboard_dummyuser@dummy.com'
   user$: Observable<User | undefined> = this.userAccountService.get();
 
    constructor(protected componentData: CmsComponentData<CmsDashboardMenuComponent>,

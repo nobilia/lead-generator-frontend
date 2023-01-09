@@ -8,8 +8,14 @@ import {CmsSimpleTitleComponent} from "./simple-title.component.model";
   styleUrls: ['./simple-title.component.scss']
 })
 export class SimpleTitleComponent {
+  dataTitle: string = '';
 
   constructor(
     public component: CmsComponentData<CmsSimpleTitleComponent>) {
+    component.data$.subscribe((data) => {
+      if (data) {
+        this.dataTitle = `<${data.titleSize}>${data.title}</${data.titleSize}>`;
+      }
+    });
   }
 }

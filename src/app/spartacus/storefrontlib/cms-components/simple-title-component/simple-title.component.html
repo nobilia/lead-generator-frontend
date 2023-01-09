@@ -1,5 +1,1 @@
-<ng-container *ngIf="component.data$ | async as data">
-  <!--  use title size as tag-->
-  {{data.titleSize}}
-  {{data.title}}
-</ng-container>
+<div class="simple-title" [innerHTML]=dataTitle></div>
