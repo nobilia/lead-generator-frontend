@@ -14,5 +14,8 @@ export const customTranslationChunksConfig: TranslationChunksConfig = {
   ],
   customCommon: [
     'httpHandlers','formErrors'
-  ]
+  ],
+  dashboardLeads: [
+    'dashboardLeadsTable'
+  ],
 };

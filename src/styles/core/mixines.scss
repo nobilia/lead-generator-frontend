@@ -41,7 +41,7 @@
 }
 
 @mixin btn-outline() {
-  @include button-variant-customize($nb-outline-btn-color, $nb-link-color, $nb-outline-btn-border, $nb-outline-btn-color, $nb-outline-btn-hover-border, $nb-outline-btn-hover-background, $nb-btn-disabled-background, $nb-outline-btn-hover-background, $nb-outline-btn-hover-border);
+  @include button-variant-customize($nb-outline-btn-color, $nb-outline-btn-background, $nb-outline-btn-border, $nb-outline-btn-color, $nb-outline-btn-hover-border, $nb-outline-btn-hover-background, $nb-btn-disabled-background, $nb-outline-btn-hover-background, $nb-outline-btn-hover-border);
 }
 
 @mixin btn-tertiary {
@@ -119,4 +119,13 @@
 
 @mixin full-circle-radius() {
   @include border-radius(50%);
+}
+
+/* --- #HEADING MIXINS --- */
+@mixin heading1-desktop() {
+  @include font-style(700, 18px, 24px);
+}
+
+@mixin heading1-mobile() {
+  @include font-style(700, 18px, 24px);
 }

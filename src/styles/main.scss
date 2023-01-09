@@ -2,6 +2,8 @@
 @import "spartacus/user";
 @import "spartacus/header";
 @import "spartacus/hamburger";
+@import "spartacus/product";
+@import "spartacus/spartacus-common";
 
 /* --- CORE--- */
 @import "core";
@@ -10,3 +12,6 @@
 /* --- UI KIT --- */
 @import "ui-kit/buttons";
 @import "ui-kit/inputs";
+
+/* --- PARTIALS--- */
+@import "partials/dashboard-leads";

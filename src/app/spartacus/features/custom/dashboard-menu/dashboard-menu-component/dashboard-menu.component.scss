@@ -6,12 +6,12 @@
 
   background: $nb-dark-green;
   color: $nb-main-brand-color;
-  display: flex;
-  align-items: center;
+  display: none;
   padding-left: 58px;
 
-  @include desktop-min {
-    display: none;
+  @include desktop {
+    display: flex;
+    align-items: center;
   }
 
   &__logo { //.menu-header__logo
@@ -34,14 +34,14 @@
   display: flex;
   flex-direction: column;
 
-  @include tablet {
+  @include desktop {
     display: none;
   }
 
   &__top { //.dashboard-menu__top
     padding: 14px 20px 32px;
 
-    @include tablet {
+    @include desktop {
       padding-top: 74px;
     }
   }
