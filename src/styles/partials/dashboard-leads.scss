@@ -17,6 +17,10 @@
 }
 
 table.leads-list {
+  @include desktop-min {
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.08));
+  }
+
   thead {
     @include tablet {
       display: none;
@@ -30,12 +34,12 @@ table.leads-list {
       background: $nb-main-brand-color;
       height: 48px;
 
-      td {
+      th {
         padding: 0 10px;
         text-align: center;
 
         &:first-child {
-          @include border-radius(4px, 0, 0);
+          @include border-radius(4px, 0, 0, 0);
 
           text-align: left;
         }

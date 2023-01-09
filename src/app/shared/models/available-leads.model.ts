@@ -5,7 +5,7 @@ export interface LeadsPrice {
   currencyIso: string;
   formattedValue: string;
   priceType: string;
-  value: 1000;
+  value: number;
 }
 
 export interface AvailableLeads {

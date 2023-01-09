@@ -31,7 +31,6 @@ export class AvailableLeadsEffect {
           )
             .pipe(
               map((results: AvailableLeadsList) => {
-                console.log(results)
                 return new LeadsActions.LoadAvailableLeadsSuccess(results);
               }),
               catchError((error) => of(new LeadsActions.LoadAvailableLeadsFail(normalizeHttpError(error)))

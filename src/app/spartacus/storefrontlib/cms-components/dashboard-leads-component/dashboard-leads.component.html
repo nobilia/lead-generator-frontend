@@ -4,46 +4,46 @@
       <ng-container *ngIf="availableLeads$ | async as availableLeads">
         <thead data-sort-title="sorting by">
           <tr>
-            <td class="leads-list__thead">
+            <th class="leads-list__thead">
               <span class="leads-list__thead-name">
                 {{ 'dashboardLeadsTable.tableHead.lead' | cxTranslate }}
               </span>
               <span class="leads-list__sort-icons leads-list__sort-icons_active">
                 <cx-icon [type]="iconType.ARROW"></cx-icon>
               </span>
-            </td>
-            <td class="leads-list__thead">
+            </th>
+            <th class="leads-list__thead">
               <span class="leads-list__thead-postcode">
                 {{ 'dashboardLeadsTable.tableHead.postcode' | cxTranslate }}
               </span>
               <span class="leads-list__sort-icons">
                 <cx-icon [type]="iconType.ARROW"></cx-icon>
               </span>
-            </td>
-            <td class="leads-list__thead">
+            </th>
+            <th class="leads-list__thead">
               <span class="leads-list__thead-budget">
                 {{ 'dashboardLeadsTable.tableHead.budget' | cxTranslate }}
               </span>
               <span class="leads-list__sort-icons">
               </span>
-            </td>
-            <td class="leads-list__thead">
+            </th>
+            <th class="leads-list__thead">
               <span class="leads-list__thead-time">
                 {{ 'dashboardLeadsTable.tableHead.timeLeft' | cxTranslate }}
               </span>
               <span class="leads-list__sort-icons">
                 <cx-icon [type]="iconType.ARROW"></cx-icon>
               </span>
-            </td>
-            <td class="leads-list__thead">
+            </th>
+            <th class="leads-list__thead">
               <span class="leads-list__thead-price">
                 {{ 'dashboardLeadsTable.tableHead.price' | cxTranslate }}
               </span>
               <span class="leads-list__sort-icons">
                 <cx-icon [type]="iconType.ARROW"></cx-icon>
               </span>
-            </td>
-            <td></td>
+            </th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
