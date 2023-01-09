@@ -43,7 +43,7 @@ export class ClearAvailableLeads extends StateUtils.LoaderResetAction {
 }
 
 export type AvailableLeadsAction =
-  | LoadAvailableLeads
+  LoadAvailableLeads
   | LoadAvailableLeadsFail
   | LoadAvailableLeadsSuccess
   | ClearAvailableLeads;

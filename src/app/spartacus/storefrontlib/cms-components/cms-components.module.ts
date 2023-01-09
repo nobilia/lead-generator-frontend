@@ -6,7 +6,7 @@ import { DashboardLeadsComponent } from './dashboard-leads-component/dashboard-l
 import { DashboardSkippedLotsComponent } from './dashboard-skipped-lots-component/dashboard-skipped-lots.component';
 import {ProductImageZoomModule} from "@spartacus/product/image-zoom/components";
 import {SharedModule} from "../../../shared/shared.module";
-import {IconModule, MediaModule} from "@spartacus/storefront";
+import {GenericLinkModule, IconModule, MediaModule} from "@spartacus/storefront";
 
 @NgModule({
   declarations: [
@@ -35,7 +35,8 @@ import {IconModule, MediaModule} from "@spartacus/storefront";
         I18nModule,
         SharedModule,
         MediaModule,
-        IconModule
+        IconModule,
+        GenericLinkModule
     ]
 })
 export class CmsComponentsModule {

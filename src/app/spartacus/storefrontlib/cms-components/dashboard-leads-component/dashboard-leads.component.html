@@ -55,7 +55,14 @@
                 </div>
                 <div>
                   <div class="leads-list__name">{{lead.name}}</div>
-                  <a href="{{lead.detailsMediaLink}}" class="leads-list__plan">Plan details</a>
+                  <cx-generic-link
+                    *ngIf="lead.detailsMediaLink"
+                    [url]="lead.detailsMediaLink"
+                    target="_blank"
+                    class="leads-list__plan"
+                  >
+                    {{ 'dashboardLeadsTable.planDetails' | cxTranslate }}
+                  </cx-generic-link>
                 </div>
               </td>
               <td class="leads-list__postcode">

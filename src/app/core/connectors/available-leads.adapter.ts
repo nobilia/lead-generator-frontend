@@ -1,5 +1,5 @@
 import {Injectable} from "@angular/core";
-import {OccEndpointsService} from "@spartacus/core";
+import {OccConfig, OccEndpointsService} from "@spartacus/core";
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {AvailableLeadsList} from "../../shared/models/available-leads.model";
@@ -11,6 +11,7 @@ export class AvailableLeadsAdapter {
   constructor(
     protected http: HttpClient,
     protected occEndpoints: OccEndpointsService,
+    protected config: OccConfig
   ) {}
 
   public loadAvailableLeads(
@@ -22,7 +23,7 @@ export class AvailableLeadsAdapter {
   ): Observable<AvailableLeadsList> {
     const params: { [key: string]: string } = {};
 
-    params['baseSiteId '] = baseSiteId.toString();
+    params['baseSiteId'] = baseSiteId.toString();
 
     if (pageSize) {
       params['pageSize'] = pageSize.toString();
@@ -43,7 +44,14 @@ export class AvailableLeadsAdapter {
       .get<AvailableLeadsList>(url)
       .pipe(
         map((data:AvailableLeadsList) => {
-          return data;
+          const newData:AvailableLeadsList = new Object(data)
+          newData.results?.forEach((item) => {
+            const link = item.detailsMediaLink;
+            item.detailsMediaLink = (this.config.backend?.media?.baseUrl ||
+                                     this.config.backend?.occ?.baseUrl ||
+                                     '') + link;
+          });
+          return newData;
         })
       );
   }
