@@ -9,7 +9,9 @@ $nb-dark-green-2: #273B38;
 $nb-gray-0: #D8D7D3;
 $nb-gray-1: #F7F6F3;
 $nb-gray-2: #EBEAE6;
+$nb-gray-green: #EBECE5;
 $nb-dark-brown: #B9A48E;
+$nb-orange: #E8A136;
 
 $nb-main-brand-color: #8D948D;
 $nb-main-brand-hover-color: $nb-dark-green;
@@ -19,7 +21,8 @@ $nb-error-color: #DD2753;
 
 $nb-primary-btn-hover-color: #2C4440;
 $nb-main-brand-pressed-color: #2C4440;
-$nb-outline-btn-color: $nb-white;
+$nb-outline-btn-color: $nb-link-color;
+$nb-outline-btn-background: $nb-white;
 $nb-outline-btn-border: $nb-gray-0;
 $nb-outline-btn-hover-border: $nb-link-color;
 $nb-outline-btn-hover-background: $nb-white;
