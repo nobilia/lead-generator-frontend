@@ -6,8 +6,9 @@ import {BehaviorSubject, Observable} from "rxjs";
 import {CustomUser} from "../../../models/user.model";
 import {AvailableLeadsService} from "../../../services/available-leads.service";
 import {AvailableLeadsList} from "../../../../shared/models/available-leads.model";
-import {tap} from "rxjs/operators";
+import {map, tap} from "rxjs/operators";
 import {ICON_TYPE} from "../../../../shared";
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-dashboard-leads.component',
@@ -33,7 +34,8 @@ export class DashboardLeadsComponent implements OnInit {
     private sseService: SseService,
     protected occEndpoints: OccEndpointsService,
     private userAccountService: UserAccountFacade,
-    private availableLeadsService: AvailableLeadsService
+    private availableLeadsService: AvailableLeadsService,
+    protected http: HttpClient
   ) {
     this.availableLeadsService.loadAvailableLeadsList(this.PAGE_SIZE);
   }
@@ -55,4 +57,21 @@ export class DashboardLeadsComponent implements OnInit {
   triggerZoom(value: boolean): void {
     this.expandImage.next(value);
   }
+
+
+  goToUrl(lotCode: string): void {
+    //TODO: replace it by service with adapter
+    // TODO: process 409 status(in case of multiple requests to pay the same lot)
+    // TODO: process 404 status
+
+    const url = this.occEndpoints.buildUrl('putAuctionLotOnRetention', {
+      urlParams: {lotCode: lotCode}
+    });
+    this.http.post<any>(url, null).pipe(
+      map((data: string) => {
+        return data
+      })
+    ).subscribe(data => window.location.href = data);
+  }
+
 }
