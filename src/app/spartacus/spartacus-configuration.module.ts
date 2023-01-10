@@ -41,7 +41,11 @@ import {CustomLoginFormComponentService} from "./services/custom.login-form-comp
           endpoints: {
             availableLotsObserver: '/auction/lots/observer?sessionToken=${sessionToken}&sessionId=${sessionId}',
             skippedLotsObserver: '/auction/skipped/lots/observer?sessionToken=${sessionToken}&sessionId=${sessionId}',
-            availableLeads: '/users/${userId}/auction/lots/available'
+            availableLeads: '/users/${userId}/auction/lots/available',
+            putAuctionLotOnRetention: '/mock/auction/lot/${lotCode}/retention',
+            finishLotAuction: '/users/${userId}/mock/auction/lot/${lotCode}/finish',
+            cancelLotRetention: '/mock/auction/lot/${lotCode}/retention/cancel',
+
           }
         }
       },

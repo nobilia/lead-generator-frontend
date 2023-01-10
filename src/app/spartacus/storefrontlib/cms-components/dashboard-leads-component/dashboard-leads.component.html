@@ -100,6 +100,7 @@
               <td class="leads-list__buttons">
                 <button
                   type="submit"
+                  (click)="goToUrl(lead.code)"
                   class="btn btn-block btn-primary">
                   {{ 'dashboardLeadsTable.button' | cxTranslate }}
                 </button>
