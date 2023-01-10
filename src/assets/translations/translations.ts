@@ -10,7 +10,7 @@ export const customTranslationChunksConfig: TranslationChunksConfig = {
     'dashboardLoginForm'
   ],
   dashboardPassword: [
-    'dashboardForgotPasswordForm'
+    'dashboardPasswordForms'
   ],
   dashboardMenu: [
     'dashboardMenuTitle'

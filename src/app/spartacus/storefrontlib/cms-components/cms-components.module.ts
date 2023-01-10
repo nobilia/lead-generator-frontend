@@ -7,7 +7,8 @@ import { DashboardSkippedLotsComponent } from './dashboard-skipped-lots-componen
 import {ProductImageZoomModule} from "@spartacus/product/image-zoom/components";
 import {SharedModule} from "../../../shared/shared.module";
 import {FormErrorsModule, GenericLinkModule, IconModule, MediaModule, SpinnerModule} from "@spartacus/storefront";
-import {DashboardForgotPasswordComponent} from "./dashboard-forgot-password-component/dashboard-forgot-password.component";
+import { DashboardForgotPasswordComponent } from "./dashboard-forgot-password-component/dashboard-forgot-password.component";
+import { DashboardResetPasswordComponent } from './dashboard-reset-password-component/dashboard-reset-password.component';
 import {RouterModule} from "@angular/router";
 import {ReactiveFormsModule} from "@angular/forms";
 
@@ -16,7 +17,8 @@ import {ReactiveFormsModule} from "@angular/forms";
     SimpleTitleComponent,
     DashboardLeadsComponent,
     DashboardSkippedLotsComponent,
-    DashboardForgotPasswordComponent
+    DashboardForgotPasswordComponent,
+    DashboardResetPasswordComponent
   ],
     imports: [
         CommonModule,
@@ -35,7 +37,10 @@ import {ReactiveFormsModule} from "@angular/forms";
                 },
                 NobiliaDashboardForgotPasswordComponent: {
                     component: DashboardForgotPasswordComponent
-              }
+                },
+                NobiliaDashboardResetPasswordComponent: {
+                    component: DashboardResetPasswordComponent
+                },
             },
         } as CmsConfig),
         ProductImageZoomModule,
