@@ -7,12 +7,14 @@ import { DashboardSkippedLotsComponent } from './dashboard-skipped-lots-componen
 import {ProductImageZoomModule} from "@spartacus/product/image-zoom/components";
 import {SharedModule} from "../../../shared/shared.module";
 import {GenericLinkModule, IconModule, MediaModule} from "@spartacus/storefront";
+import { DashboardMyLeadsComponent } from './dashboard-my-leads/dashboard-my-leads.component';
 
 @NgModule({
   declarations: [
     SimpleTitleComponent,
     DashboardLeadsComponent,
-    DashboardSkippedLotsComponent
+    DashboardSkippedLotsComponent,
+    DashboardMyLeadsComponent
   ],
     imports: [
         CommonModule,
@@ -29,6 +31,10 @@ import {GenericLinkModule, IconModule, MediaModule} from "@spartacus/storefront"
                     component: DashboardSkippedLotsComponent,
                     guards: [AuthGuard]
                 },
+              NobiliaMyLeadsComponent: {
+                component: DashboardMyLeadsComponent,
+                guards: [AuthGuard]
+              }
             },
         } as CmsConfig),
         ProductImageZoomModule,
