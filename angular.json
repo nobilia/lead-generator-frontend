@@ -137,5 +137,8 @@
       }
     }
   },
-  "defaultProject": "leadgen-dashboard-web"
+  "defaultProject": "leadgen-dashboard-web",
+  "cli": {
+    "analytics": false
+  }
 }

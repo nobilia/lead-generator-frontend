@@ -1,0 +1,44 @@
+@import "core";
+
+.alert {
+  --cx-height: #{$nb-cx-height};
+  --cx-color-success: #{$nb-white};
+  --cx-display: #{$nb-alert-cx-display};
+  --cx-color-success-background: #{$nb-green-1};
+  --cx-color-error-background: #{$nb-error-color};
+  --cx-font-weight: 500;
+  --cx-font-size: 13px;
+  --cx-line-height: 16px;
+  --cx-color: #{$nb-gray-1};
+  --cx-text-align: left;
+
+  justify-content: flex-start;
+  min-height: 52px;
+  margin-bottom: 0;
+  padding-inline-start: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: var(--cx-font-weight, 500);
+
+  &-icon { // .alert-icon
+    @include size($nb-cx-height);
+    @include full-circle-radius();
+
+    justify-content: center;
+    background-color: $nb-dark-opacity-01;
+
+    cx-icon svg,
+    .cx-icon svg {
+      @include size($nb-cx-height/2)
+    }
+  }
+
+  &-success { // .alert-success
+    background-color: var(--cx-color-success-background, #{$nb-green-1});
+  }
+
+  &-danger, // .alert-danger
+  &-error { // .alert-error
+    background-color: var(--cx-color-error-background, #{$nb-error-color});
+  }
+}

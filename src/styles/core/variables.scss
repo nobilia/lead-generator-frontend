@@ -3,6 +3,7 @@ $nb-font-family: "Montserrat";
 $nb-white: #FFFFFF;
 $nb-black: #000000;
 $nb-green: #009254;
+$nb-green-1: #448A6D;
 $nb-dark-green: #2C4440;
 $nb-dark-green-1: #707D6E;
 $nb-dark-green-2: #273B38;
@@ -34,6 +35,14 @@ $nb-radius-default: 2px;
 
 $nb-button-border-radius: 100px;
 $nb-checkbox-border-radius: $nb-radius-default;
+
+$nb-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08);
+$nb-dark-opacity-01: rgba(0, 0, 0, 0.1);
+
+
+/* --- #ALERT --- */
+$nb-cx-height: 32px;
+$nb-alert-cx-display: flex;
 
 /* --- #INPUTS --- */
 $nb-input-border-radius: $nb-radius-default;

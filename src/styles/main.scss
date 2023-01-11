@@ -4,12 +4,14 @@
 @import "spartacus/hamburger";
 @import "spartacus/product";
 @import "spartacus/spartacus-common";
+@import "spartacus/alert";
 
 /* --- CORE--- */
 @import "core";
 @import "core/common";
 
 /* --- UI KIT --- */
+@import "ui-kit/forms";
 @import "ui-kit/buttons";
 @import "ui-kit/inputs";
 

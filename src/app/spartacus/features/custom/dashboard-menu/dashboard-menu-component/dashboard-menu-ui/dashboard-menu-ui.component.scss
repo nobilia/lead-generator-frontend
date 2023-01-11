@@ -39,6 +39,20 @@ nav {
         background: $nb-green;
         margin-left: 9px;
       }
+
+      cx-generic-link {
+        color: $nb-white;
+        > a {
+          &,
+          &:link,
+          &:hover,
+          &:active,
+          &:focus,
+          &:visited {
+            color: $nb-white;
+          }
+        }
+      }
     }
   }
 }

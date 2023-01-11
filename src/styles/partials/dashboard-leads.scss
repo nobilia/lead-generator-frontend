@@ -1,6 +1,4 @@
 .dashboard-leads {
-  background: $nb-gray-green;
-
   &__wrapper { //dashboard-leads__wrapper
     padding: 28px 30px;
 
@@ -18,7 +16,7 @@
 
 table.leads-list {
   @include desktop-min {
-    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.08));
+    filter: drop-shadow($nb-box-shadow);
   }
 
   thead {
@@ -62,7 +60,7 @@ table.leads-list {
 
         display: flex;
         flex-direction: column;
-        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08);
+        box-shadow: $nb-box-shadow;
         margin-bottom: 20px;
       }
 
