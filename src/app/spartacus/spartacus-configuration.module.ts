@@ -41,6 +41,7 @@ import {CustomLoginFormComponentService} from "./services/custom.login-form-comp
           endpoints: {
             availableLotsObserver: '/auction/lots/observer?sessionToken=${sessionToken}&sessionId=${sessionId}',
             skippedLotsObserver: '/auction/skipped/lots/observer?sessionToken=${sessionToken}&sessionId=${sessionId}',
+            auctionResultsObserver: '/auction/results/observer?sessionToken=${sessionToken}&sessionId=${sessionId}',
             availableLeads: '/users/${userId}/auction/lots/available'
           }
         }
