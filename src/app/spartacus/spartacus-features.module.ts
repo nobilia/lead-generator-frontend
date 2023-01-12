@@ -60,6 +60,9 @@ import {SmartEditFeatureModule} from './features/smartedit/smart-edit-feature.mo
 import {RoutingModule} from "./features/custom/routing/routing.module";
 import {CmsComponentsModule} from "./storefrontlib/cms-components/cms-components.module";
 import { ProductImageZoomFeatureModule } from './features/product/product-image-zoom-feature.module';
+import {
+  DashboardChangePasswordModule
+} from "./features/custom/dashboard-change-password/dashboard-change-password.module";
 
 @NgModule({
   declarations: [],
@@ -133,6 +136,7 @@ import { ProductImageZoomFeatureModule } from './features/product/product-image-
     // Custom
     RoutingModule,
     CmsComponentsModule,
+    DashboardChangePasswordModule,
     ConfigModule.withConfig({
       featureModules: {
         dashboardLogin: {

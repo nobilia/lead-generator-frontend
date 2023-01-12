@@ -1,15 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {CmsConfig, ConfigModule} from "@spartacus/core";
-import {LayoutConfig, NavigationService} from "@spartacus/storefront";
-import {
-  DashboardLoginComponent
-} from "./features/custom/dashboard-login/dashboard-login-component/dashboard-login.component";
-import {LoginFormComponentService} from "@spartacus/user/account/components";
-import {
-  DashboardMenuComponent
-} from "./features/custom/dashboard-menu/dashboard-menu-component/dashboard-menu.component";
-import {CustomLoginFormComponentService} from "./services/custom.login-form-component.service";
+import { AuthGuard, CmsConfig, ConfigModule } from "@spartacus/core";
+import { LayoutConfig, NavigationService } from "@spartacus/storefront";
+import { DashboardLoginComponent } from "./features/custom/dashboard-login/dashboard-login-component/dashboard-login.component";
+import { DashboardMenuComponent } from "./features/custom/dashboard-menu/dashboard-menu-component/dashboard-menu.component";
+import { CustomLoginFormComponentService } from "./services/custom.login-form-component.service";
+import { UpdatePasswordComponentService } from "@spartacus/user/profile/components";
+import { DashboardChangePasswordComponent } from "./features/custom/dashboard-change-password/dashboard-change-password-component/dashboard-change-password.component";
 
 
 @NgModule({
@@ -31,7 +28,19 @@ import {CustomLoginFormComponentService} from "./services/custom.login-form-comp
             {
               provide: CustomLoginFormComponentService
             }]
-        },
+        }
+      },
+    } as CmsConfig),
+    ConfigModule.withConfig({
+      cmsComponents: {
+        nobiliaChangePasswordComponent: {
+          component: DashboardChangePasswordComponent,
+          providers: [
+            {
+              provide: UpdatePasswordComponentService
+            }],
+          guards: [AuthGuard]
+        }
       },
     } as CmsConfig),
     ConfigModule.withConfig({

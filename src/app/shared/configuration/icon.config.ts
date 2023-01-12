@@ -18,6 +18,8 @@ export const matIconConfig: IconConfig = {
       SEARCH: 'icon-search',
       INFO: 'icon-info',
       ARROW_DROPDOWN: 'icon-arrow-dropdown',
+      SUCCESS: 'icon-success',
+      ERROR: 'icon-error',
     },
     resources: [
       {
@@ -36,7 +38,9 @@ export const matIconConfig: IconConfig = {
           ICON_TYPE.ARROW,
           ICON_TYPE.SEARCH,
           ICON_TYPE.INFO,
-          ICON_TYPE.ARROW_DROPDOWN
+          ICON_TYPE.ARROW_DROPDOWN,
+          ICON_TYPE.SUCCESS,
+          ICON_TYPE.ERROR
         ],
       },
     ],

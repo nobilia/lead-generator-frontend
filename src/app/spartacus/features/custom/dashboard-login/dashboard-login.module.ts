@@ -25,8 +25,8 @@ import {SharedModule} from "../../../../shared/shared.module";
     RouterModule,
     ReactiveFormsModule,
     FormErrorsModule,
-    IconModule,
-    SharedModule
+    SharedModule,
+    IconModule
   ]
 })
 export class DashboardLoginModule {

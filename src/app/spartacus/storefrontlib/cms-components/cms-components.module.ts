@@ -7,14 +7,12 @@ import {DashboardSkippedLotsComponent} from './dashboard-skipped-lots-component/
 import {ProductImageZoomModule} from "@spartacus/product/image-zoom/components";
 import {SharedModule} from "../../../shared/shared.module";
 import {GenericLinkModule, IconModule, MediaModule} from "@spartacus/storefront";
-import {DashboardChangePasswordComponent} from './dashboard-change-password-component/dashboard-change-password.component';
 
 @NgModule({
   declarations: [
     SimpleTitleComponent,
     DashboardLeadsComponent,
-    DashboardSkippedLotsComponent,
-    DashboardChangePasswordComponent
+    DashboardSkippedLotsComponent
   ],
   imports: [
     CommonModule,
@@ -29,10 +27,6 @@ import {DashboardChangePasswordComponent} from './dashboard-change-password-comp
         },
         nobiliaSkippedLeadsComponent: {
           component: DashboardSkippedLotsComponent,
-          guards: [AuthGuard]
-        },
-        nobiliaChangePasswordComponent: {
-          component: DashboardChangePasswordComponent,
           guards: [AuthGuard]
         }
       },

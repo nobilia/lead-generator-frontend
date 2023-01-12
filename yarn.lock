@@ -1485,6 +1485,13 @@
   dependencies:
     tslib "^2.3.0"
 
+"@spartacus/product@4.3.7":
+  version "4.3.7"
+  resolved "https://registry.yarnpkg.com/@spartacus/product/-/product-4.3.7.tgz#7fad89b246ae50eab9899e50177c1f369c2abd52"
+  integrity sha512-G2cxo26eVFI91rVW05PUvZgqVH2lKnXoS1kpG4V8tGruhXjusIlMQKhnOTxjmco9ZWiINZeCqU5IrRF9iB/N7A==
+  dependencies:
+    tslib "^2.3.0"
+
 "@spartacus/schematics@^4.3.7":
   version "4.3.7"
   resolved "https://registry.yarnpkg.com/@spartacus/schematics/-/schematics-4.3.7.tgz#006c01c6360b91d957441a89a374542cd4b77365"

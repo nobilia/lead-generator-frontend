@@ -7,8 +7,8 @@
 }
 
 body {
-  --cx-color-primary: $nb-main-brand-color;
-  --cx-color-danger: $nb-error-color;
+  --cx-color-primary: #{$nb-main-brand-color};
+  --cx-color-danger: #{$nb-error-color};
   --cx-buttons-border-radius: 50px;
   --cx-color-background-focus: none;
 }
@@ -38,4 +38,39 @@ h1 {
   @include desktop-min {
     @include heading1-desktop();
   }
+}
+
+.MainContent {
+  background-color: $nb-gray-green;
+
+  @include desktop-min {
+    align-content: flex-start;
+    min-height: 100vh;
+  }
+}
+
+app-simple-title {
+  background-color: $nb-white;
+}
+
+.accountMainContent{
+  padding: 32px 24px;
+
+  @include desktop-min {
+    padding: 28px 30px;
+  }
+}
+
+.accountMainContentItem {
+  background-color: $nb-white;
+  padding: 24px 12px;
+
+  @include desktop-min {
+    padding: 64px 24px;
+  }
+}
+
+.accountMainContentItemInner {
+  max-width: 370px;
+  margin: 0 auto;
 }

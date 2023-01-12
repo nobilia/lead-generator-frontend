@@ -18,4 +18,7 @@ export const customTranslationChunksConfig: TranslationChunksConfig = {
   dashboardLeads: [
     'dashboardLeadsTable'
   ],
+  dashboardUpdatePassword: [
+    'updatePasswordForm'
+  ],
 };
