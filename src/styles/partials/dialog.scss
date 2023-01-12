@@ -1,0 +1,39 @@
+.modal {
+  background: $nb-dark-opacity-07;
+
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 18px;
+  }
+}
+
+.cx-dialog {
+  background: $nb-white;
+
+  &-header { //.cx-dialog-header
+    padding: 18px 24px;
+    min-height: 54px;
+    position: relative;
+  }
+
+  &-body { //.cx-dialog-body
+    padding: 30px 24px;
+  }
+
+  &-content { //.cx-dialog-content
+    height: 100%;
+  }
+}
+
+.cx-lead-image-zoom-dialog {
+  max-width: 90vw;
+  min-width: 90vw;
+  margin: 5vh auto;
+
+  cx-media img {
+    @include size(100%);
+
+    object-fit: contain;
+  }
+}

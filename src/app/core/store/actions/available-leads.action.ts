@@ -12,7 +12,6 @@ export class LoadAvailableLeads extends StateUtils.LoaderLoadAction {
   readonly type = LOAD_AVAILABLE_LEADS;
   constructor(public payload: {
     userId: string,
-    baseSiteId: string,
     pageSize?: number,
     currentPage?: number,
     sort?: string

@@ -28,14 +28,11 @@ export class AvailableLeadsService {
   }
 
   loadAvailableLeadsList(pageSize: number, currentPage?: number, sort?: string): void {
-    const baseSiteId = 'lead-gen-dashboard';
-
     this.userIdService.takeUserId(true).subscribe(
     (userId) => {
       this.store.dispatch(
         new LeadsActions.LoadAvailableLeads({
           userId,
-          baseSiteId,
           pageSize,
           currentPage,
           sort,

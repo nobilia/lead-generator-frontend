@@ -24,7 +24,6 @@ export class AvailableLeadsEffect {
         switchMap((payload) => {
           return this.leadsConnector.getAvailableLeads(
             payload.userId,
-            payload.baseSiteId,
             payload.pageSize,
             payload.currentPage,
             payload.sort

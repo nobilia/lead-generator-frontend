@@ -16,14 +16,11 @@ export class AvailableLeadsAdapter {
 
   public loadAvailableLeads(
     userId: string,
-    baseSiteId: string,
     pageSize?: number,
     currentPage?: number,
     sort?: string
   ): Observable<AvailableLeadsList> {
     const params: { [key: string]: string } = {};
-
-    params['baseSiteId'] = baseSiteId.toString();
 
     if (pageSize) {
       params['pageSize'] = pageSize.toString();

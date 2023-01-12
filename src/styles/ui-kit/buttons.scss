@@ -3,6 +3,10 @@
 
   padding: 10px 16px;
   height: 36px;
+
+  &:focus {
+    box-shadow: none;
+  }
 }
 
 .btn-outline {
@@ -27,5 +31,25 @@
   &:focus {
     color: $nb-link-color;
     text-decoration: none;
+  }
+}
+
+.btn-zoom {
+  @include size(24px);
+  @include border-radius-0();
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: $nb-white;
+  background: $nb-dark-opacity-05;
+  min-width: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+
+  cx-icon svg {
+    @include size(16px);
   }
 }
