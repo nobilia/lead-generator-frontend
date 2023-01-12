@@ -126,6 +126,9 @@ table.leads-list {
   &__img { //leads-list__img
     @include size(72px, 100px);
 
+    position: relative;
+    cursor: pointer;
+
     img {
       @include size(72px, 100px);
 

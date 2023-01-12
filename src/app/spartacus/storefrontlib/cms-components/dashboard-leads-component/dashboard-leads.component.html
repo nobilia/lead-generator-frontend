@@ -51,7 +51,7 @@
             <tr>
               <td class="leads-list__description">
                 <div class="leads-list__img">
-                  <cx-media [container]="lead.images" (click)="triggerZoom(true)"></cx-media>
+                  <app-lead-image-zoom [images]="lead.images"></app-lead-image-zoom>
                 </div>
                 <div>
                   <div class="leads-list__name">{{lead.name}}</div>

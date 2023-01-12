@@ -9,11 +9,10 @@ export class AvailableLeadsConnector {
 
   public getAvailableLeads(
     userId: string,
-    baseSiteId: string,
     pageSize?: number,
     currentPage?: number,
     sort?: string
   ): Observable<AvailableLeadsList> {
-    return this.adapter.loadAvailableLeads(userId, baseSiteId, pageSize, currentPage, sort);
+    return this.adapter.loadAvailableLeads(userId, pageSize, currentPage, sort);
   }
 }

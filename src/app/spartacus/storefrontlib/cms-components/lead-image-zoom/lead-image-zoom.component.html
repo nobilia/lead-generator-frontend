@@ -1,0 +1,11 @@
+<ng-container *ngIf="images">
+  <cx-media [container]="images" (click)="triggerZoom()"></cx-media>
+  <button
+    class="btn btn-zoom"
+    (click)="triggerZoom()"
+  >
+    <span>
+      <cx-icon [type]="iconType.ZOOM"></cx-icon
+      ></span>
+  </button>
+</ng-container>

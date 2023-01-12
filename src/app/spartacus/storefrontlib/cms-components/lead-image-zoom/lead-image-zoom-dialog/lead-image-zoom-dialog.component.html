@@ -1,0 +1,26 @@
+<div class="cx-dialog cx-lead-image-zoom-dialog">
+  <div class="cx-dialog-content">
+    <div class="cx-dialog-header">
+      <button
+        type="button"
+        class="close"
+        (click)="dismissModal('cross click')"
+      >
+        <span aria-hidden="true">
+          <!-- TO DO add icon-->
+          <!--<cx-icon [type]="iconType.CLOSE"></cx-icon>-->
+        </span>
+      </button>
+    </div>
+    <div class="cx-dialog-body">
+      <ng-container *ngIf="zoomImages as main">
+      <cx-media
+        class="cx-default-image-zoom"
+        [container]="main"
+      >
+      </cx-media>
+      </ng-container>
+    </div>
+  </div>
+</div>
+

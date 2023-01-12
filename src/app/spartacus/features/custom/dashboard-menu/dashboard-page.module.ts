@@ -12,7 +12,6 @@ import {
 import { RouterModule } from '@angular/router';
 import { DashboardMenuUiComponent } from './dashboard-menu-component/dashboard-menu-ui/dashboard-menu-ui.component';
 import {SharedModule} from "../../../../shared/shared.module";
-import {ProductImageZoomModule} from "@spartacus/product/image-zoom";
 
 @NgModule({
   declarations: [
@@ -28,8 +27,7 @@ import {ProductImageZoomModule} from "@spartacus/product/image-zoom";
     I18nModule,
     NavigationModule,
     SharedModule,
-    HamburgerMenuModule,
-    ProductImageZoomModule
+    HamburgerMenuModule
   ]
 })
 
