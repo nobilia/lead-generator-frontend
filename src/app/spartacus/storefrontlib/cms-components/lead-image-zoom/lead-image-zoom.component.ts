@@ -3,6 +3,7 @@ import {LaunchDialogService} from "@spartacus/storefront";
 import {ImageGroup} from "@spartacus/core/src/model/image.model";
 import {ICON_TYPE} from "../../../../shared";
 import {take} from "rxjs/operators";
+import {LAUNCH_CALLER} from "./default-lead-image-zoom-layout.config";
 
 @Component({
   selector: 'app-lead-image-zoom',
@@ -21,7 +22,7 @@ export class LeadImageZoomComponent  {
     };
 
     const dialog = this.launchDialogService.openDialog(
-      "LEAD_IMAGE_ZOOM",
+      LAUNCH_CALLER.LEAD_IMAGE_ZOOM,
       undefined,
       undefined,
       zoomData

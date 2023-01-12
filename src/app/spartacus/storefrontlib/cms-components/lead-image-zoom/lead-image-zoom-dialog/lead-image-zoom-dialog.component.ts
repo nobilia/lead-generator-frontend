@@ -1,4 +1,4 @@
-import {Component, ElementRef, HostListener, OnInit} from '@angular/core';
+import {Component, ElementRef, HostListener, OnDestroy, OnInit} from '@angular/core';
 import {LaunchDialogService} from "@spartacus/storefront";
 import {ImageGroup} from "@spartacus/core/src/model/image.model";
 import {Subscription} from "rxjs";
@@ -9,7 +9,7 @@ import {ICON_TYPE} from "../../../../../shared";
   templateUrl: './lead-image-zoom-dialog.component.html'
 })
 
-export class LeadImageZoomDialogComponent implements OnInit {
+export class LeadImageZoomDialogComponent implements OnInit, OnDestroy {
   @HostListener('click', ['$event'])
   handleClick(event: UIEvent): void {
     if ((event.target as any).tagName === this.el.nativeElement.tagName) {
@@ -37,5 +37,9 @@ export class LeadImageZoomDialogComponent implements OnInit {
 
   dismissModal(reason?: any): void {
     this.launchDialogService.closeDialog(reason);
+  }
+
+  ngOnDestroy(): void {
+    this.subscription?.unsubscribe();
   }
 }
